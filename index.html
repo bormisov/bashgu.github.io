@@ -11,7 +11,13 @@
                 } 
                 if (numButton == 2) {
                     mybutton = document.getElementById('button2')
-                    mybutton.innerHTML = 'Новый текст'
+                    if (mybutton.value == "1") {
+                        mybutton.innerHTML = 'Вернуть прежний текст'
+                        mybutton.value = "2"
+                    } else {
+                        mybutton.innerHTML = 'Изменить этот текст'
+                        mybutton.value = "1"                        
+                    }
                 }  
                 if (numButton == 3) {
                     mytxt = document.getElementById('text3')
@@ -29,7 +35,7 @@
         <button onclick="buttonClick(1)" >Изменить текст выше</button>
         <h3>Изменение текста на кнопке</h3>
         <div>
-            <button onclick="buttonClick(2)" id="button2" >Изменить этот текст</button>    
+            <button onclick="buttonClick(2)" id="button2" value="1">Изменить этот текст</button>    
         </div>
         <h3>Выполнение кода, введенного пользователем</h3>
     	<div>
